@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+form input, form button {
+  width: 500px;
+  height: 40px;
+  outline: none;
+}
+form input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+form button {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

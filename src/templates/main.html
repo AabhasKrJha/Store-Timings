@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Timing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+</head>
+<body>
+
+    <div class="flex">
+        <form action="/trigger_report" method="post">
+            <input type="text" placeholder="Enter Store ID" name="storeID"><br>
+            <button id="startTask" type="submit">Generate Report</button>
+        </form>
+        <div id="status"></div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#startTask').click(function() {
+                    $('#status').text('Status: Running...');
+                    $.get('/run_task', function(data) {
+                        $('#status').text('Status: ' + data.result);
+                    });
+                });
+            });
+        </script>
+
+</body>
+    
+</body>
+</html>

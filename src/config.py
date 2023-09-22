@@ -1,0 +1,11 @@
+import os
+
+SECRET_KEY = b'H\xf2\x0f#\xf0\x0f\xe9\xcea\x99\x0b\xdc\xcc\xd0n\xa1T\r\xa4d\x03\x17I\xa1\x1b\xee\x16\xdcx3q\x86'
+
+cwd = os.getcwd()
+store_info_db_path = os.path.join(cwd, "stores.db")
+
+SECRET_KEY = b'QI\xbb\x02\x1e\t\x1c\xe7\xe0\xdf`\xc7H\x98~\xbe\xc6\xf0\xa3de1\xdd\x80\xb4\x14\xb8\x8d:\xd7v\xf5'
+
+SQLALCHEMY_DATABASE_URI = f'sqlite:///{store_info_db_path}'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
